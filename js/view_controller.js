@@ -19,13 +19,13 @@ function controller() {
 
 // Trigger - Btn 
 let btn = document.getElementById("trigBtn");
-btn = addEventListener("click" ,actOnClick);
+btn.addEventListener("click" ,actOnClick);
 
 
 // Trigger - Input
 let field = document.getElementsByName("eingabe")[0];
-field = addEventListener("input", isInputValid);
-
+field.addEventListener("input", isInputValid);
+//ausgabe(field);
 
 // Event-Dispatcher
 function actOnClick() {
@@ -42,7 +42,15 @@ function actOnClick() {
 function isInputValid() {
     let inputStr = field.value;
     ausgabe(inputStr);
-    //return false;
+    
+
+    let cond = true;
+
+    if (true) {
+        field.value = "";
+        updateImg(data.default.bev);
+    }
+    return false;
 }
 
 
