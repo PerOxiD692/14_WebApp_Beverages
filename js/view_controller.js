@@ -6,10 +6,15 @@
 	Check Daten :: 
     Btn. Trigger :: 
     Business-Logic (Alter --> Getränk) :: 
-    Bild austauschen ::
+    Bild austauschen :: check!
 */
 
 // Modul Ablaufsteuerung | Test:
+controller()
+function controller() {
+    ausgabe(updateImg(checkAge(4)));
+}
+
 
 // Trigger - Btn 
 // Trigger - Input
@@ -28,35 +33,30 @@
 // ausgabe(checkAge(20));
 // ausgabe(checkAge(132));
 // ausgabe(checkAge());
-
 function checkAge(age) {
-    switch (true) {
-        case (age>=0 && age<=5):
+    switch (true) 
+    {
+        case (age >= 0) && (age <= 5):
             return "milch";
-    
-        case (age>=6 && age<=12):
+        case (age >= 6) && (age <= 12):
             return "saft";
-        
-        case (age>=13 && age<=17):
+        case (age >= 13) && (age <= 17):
             return "cola";
-    
-         case (age>=18) && (age<=130):
-            return "wein";
-
+        case (age >= 18) && (age <= 130):
+            return "wein";    
         default:
-            return "Tee";
+            return "tee";  
     }
 }
 
 
 // Modul: Bild aktualisieren | Test:
-//ausgabe(updateImg("cola"));
+// ausgabe(updateImg("cola"));
 function updateImg(imgName) {
-    let  img = document.getElementById("bevImg");
+    let img = document.getElementById("bevImg");
     img.src = "./bilder/" + imgName + ".jpg";
-    return imgName;
+    return imgName; // monitoring
 }
-
 
 //Modul: Konsolenausgabe --> Test:
 function ausgabe(outputStr) {
