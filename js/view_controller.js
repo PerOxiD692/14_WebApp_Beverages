@@ -6,7 +6,7 @@
 	Check Daten :: 
     Btn. Trigger :: 
     Business-Logic (Alter --> Getränk) :: 
-    Bild austauschen :: 
+    Bild austauschen ::
 */
 
 // Modul Ablaufsteuerung | Test:
@@ -22,13 +22,18 @@
 // Modul Eingabe | Test:
 
 // Modul: Business-Logic (Mapping) | Test:
+ausgabe(checkAge());
+function checkAge() {
+    return "test";
+}
+
 
 // Modul: Bild aktualisieren | Test:
-ausgabe(updateImg());
-function updateImg(params) {
+//ausgabe(updateImg("cola"));
+function updateImg(imgName) {
     let  img = document.getElementById("bevImg");
-    img.src = "./bilder/cola.jpg";
-    return img;
+    img.src = "./bilder/" + imgName + ".jpg";
+    return imgName;
 }
 
 
