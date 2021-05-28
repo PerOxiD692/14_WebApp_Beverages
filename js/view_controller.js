@@ -37,7 +37,6 @@ function actOnClick() {
     
 }
 
-
 // Check auf korrekte Eingaben ...
 function isInputValid() {
     let inputStr = field.value;
@@ -49,7 +48,7 @@ function isInputValid() {
         field.value = "";
         updateImg(data.default.bev);
     }
-    return false;
+    return cond;
 }
 
 
