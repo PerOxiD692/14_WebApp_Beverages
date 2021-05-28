@@ -23,6 +23,8 @@ btn = addEventListener("click" ,actOnClick);
 
 
 // Trigger - Input
+let field = document.getElementsByName("eingabe")[0];
+field = addEventListener("input", isInputValid);
 
 
 // Event-Dispatcher
@@ -30,14 +32,18 @@ function actOnClick() {
     if (isInputValid()) {
         controller();
     } else {
-        ausgabe("Input nicht korrekt.")
+        ausgabe("Input nicht korrekt.");
     }
     
 }
 
 
 // Check auf korrekte Eingaben ...
-
+function isInputValid() {
+    let inputStr = field.value;
+    ausgabe(inputStr);
+    //return false;
+}
 
 
 

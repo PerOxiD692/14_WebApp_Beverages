@@ -1,10 +1,10 @@
-* model (Daten/Logik) */
+/* model (Daten/Logik) */
 
 let data = {
     milk:{lower:0, upper:5, bev:"milch"},
     juice:{lower:6, upper:12, bev:"saft"},
     cola:{lower:13, upper:20, bev:"cola"},
-    wine:{lower:21, upper:110, bev:"wein"},
+    wine:{lower:21, upper:130, bev:"wein"},
     default:{bev:"tee"}
 }
 
