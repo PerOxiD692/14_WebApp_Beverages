@@ -41,12 +41,11 @@ function actOnClick() {
 // Check auf korrekte Eingaben ...
 function isInputValid() {
     let inputStr = field.value;
-    ausgabe(inputStr);
-    
+    let patt = /^[0-9]{1,3}$/g;
+    let cond = patt.test(inputStr);
+    //ausgabe(inputStr);
 
-    let cond = true;
-
-    if (true) {
+    if (!cond) {
         field.value = "";
         updateImg(data.default.bev);
     }
